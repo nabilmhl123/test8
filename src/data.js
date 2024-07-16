@@ -32,25 +32,20 @@ import SkillImg1 from './assets/img/skills/html5.png';
 import SkillImg2 from './assets/img/skills/css3.png';
 import SkillImg3 from './assets/img/skills/js.png';
 import SkillImg4 from './assets/img/skills/reactjs.png';
-import SkillImg5 from './assets/img/skills/nextjs.png';
-import SkillImg6 from './assets/img/skills/nodejs.png';
-import SkillImg7 from './assets/img/skills/git.png';
-import SkillImg8 from './assets/img/skills/figma.png';
+import SkillImg5 from './assets/img/skills/nodejs.png';
+import SkillImg6 from './assets/img/skills/git.png';
+import SkillImg7 from './assets/img/skills/figma.png';
 
-// testimonial images
-import TestiImage1 from './assets/img/testimonials/testimonial-1.webp';
-import TestiImage2 from './assets/img/testimonials/testimonial-2.webp';
-import TestiImage3 from './assets/img/testimonials/testimonial-3.webp';
 
 // navigation
 export const navigation = [
   {
-    name: 'home',
-    href: 'home',
+    name: 'accueil',
+    href: 'accueil',
   },
   {
-    name: 'about',
-    href: 'about',
+    name: 'à propos',
+    href: 'à propos',
   },
   {
     name: 'portfolio',
@@ -59,10 +54,6 @@ export const navigation = [
   {
     name: 'services',
     href: 'services',
-  },
-  {
-    name: 'testimonials',
-    href: 'testimonials',
   },
   {
     name: 'contact',
@@ -157,16 +148,16 @@ export const projectsData = [
 // projects
 export const projectsNav = [
   {
-    name: 'all',
+    name: 'Tous',
   },
   {
-    name: 'UI/UX Design',
+    name: 'React, JS',
   },
   {
-    name: 'web development',
+    name: 'Développement Web',
   },
   {
-    name: 'branding',
+    name: 'Autres',
   },
 ];
 
@@ -193,28 +184,25 @@ export const skills = [
   {
     image: SkillImg7,
   },
-  {
-    image: SkillImg8,
-  },
 ];
 
 // services
 export const services = [
   {
     icon: <FiLayout />,
-    name: 'Web Design',
+    name: 'Front-end',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
   },
   {
     icon: <FiSettings />,
-    name: 'Web Development',
+    name: 'Back-end',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
   },
   {
     icon: <FiPenTool />,
-    name: 'Branding',
+    name: 'Autres',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
   },
@@ -226,43 +214,19 @@ export const services = [
   },
 ];
 
-// testimonials
-export const testimonials = [
-  {
-    authorImg: TestiImage1,
-    authorText:
-      'Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.',
-    authorName: 'Olivia Doe',
-    authorPosition: 'Head of Design, Google',
-  },
-  {
-    authorImg: TestiImage2,
-    authorText:
-      'Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.',
-    authorName: 'Olivia Doe',
-    authorPosition: 'Head of Design, Google',
-  },
-  {
-    authorImg: TestiImage3,
-    authorText:
-      'Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.',
-    authorName: 'Olivia Doe',
-    authorPosition: 'Head of Design, Google',
-  },
-];
 
 // contact
 export const contact = [
   {
     icon: <FiMail />,
-    title: 'Have a question?',
-    subtitle: 'I am here to help you.',
-    description: 'Email me at hello@youremail.com',
+    title: 'Des Questions?',
+    subtitle: '👇',
+    description: 'nabilmhl-dev@outlook.com',
   },
   {
     icon: <FiMapPin />,
-    title: 'Current Location',
-    subtitle: 'Bucharest, Romania',
-    description: 'Serving clients worldwide',
+    title: 'Localisation',
+    subtitle: 'Paris, France',
+    description: 'Service de qualité',
   },
 ];

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const About = () => {
+const Apropos = () => {
   return (
-    <section id='about' className='section
+    <section id='à propos' className='section
     bg-secondary'>
         <div className='flex flex-col xl:flex-row
         gap-24'>
@@ -22,7 +22,7 @@ const About = () => {
                     </h2>
                     <p className='mb-4 text-accent'>
                         Développeur FullStack
-                    </p>
+                    </p> 
                     <hr className='mb-8 opacity-5'/>
                     <p className='mb-8'>
                         Dévoloppeur en construction
@@ -34,4 +34,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Apropos

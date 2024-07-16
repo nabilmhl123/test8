@@ -1,9 +1,13 @@
 import Header from "./Components/Header"
 import Hero from "./Components/Hero"
-import Brands from "./Components/Brands"
-import About from "./Components/About"
+import Brands from "./Components/Cv"
+import Apropos from "./Components/Apropos"
 import Skills from "./Components/Skills"
 import Portfolio from "./Components/Portfolio"
+import Services from "./Components/Services"
+import Contact from "./Components/Contact"
+import Footer from "./Components/Footer"
+
 
 const App = () => {
   return (
@@ -11,10 +15,12 @@ const App = () => {
       <Header/>
       <Hero/>
       <Brands/>
-      <About/>
+      <Apropos/>
       <Skills/>
       <Portfolio/>
-      <div style={{ height: '2000px' }}></div>
+      <Services/>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }
