@@ -8,8 +8,7 @@ const Contact = () => {
         <div className='flex flex-col items-center text-center'>
           <h2 className='section-title'>Contactez moi</h2>
           <p className='subtitle text-center'>
-            sq;fbkdfgbjksngngsù
-            skjfdbjgsbgljhgslg
+          Pour toute demande spécifique.
           </p>
         </div>
         <div className='flex flex-col lg:gap-x-8 lg:flex-row'>

@@ -3,12 +3,12 @@ import React from 'react';
 import { projectsData, projectsNav } from "../data";
 
 const Projects = () => {
-    const [item, setItem] = useState({ name: 'all' });
-    const [projects, setProjects] = useState([]);
+    const [item, setItem] = useState({ name: 'tous' });
+    const [projects, setProjects] = useState(projectsData);
     const [active, setActive] = useState(0);
 
     useEffect(() => {
-        if (item.name === 'all') {
+        if (item.name === 'tous') {
             setProjects(projectsData);
         } else {
             const newProjects = projectsData.filter((project) => {
@@ -38,10 +38,16 @@ const Projects = () => {
                     ))}
                 </ul>
             </nav>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
                 {projects.map((project, index) => (
-                    <div key={index} className="project-card max-w-sm rounded-2xl overflow-hidden shadow-lg">
-                        <img src={project.image} alt={project.name} className="w-full h-auto rounded-2xl" />
+                    <div key={index} className="project-card max-w-md rounded-2xl overflow-hidden shadow-lg">
+                        <div className="h-64 w-full">
+                            <img 
+                                src={project.image} 
+                                alt={project.name} 
+                                className="w-full h-full object-cover rounded-t-2xl"
+                            />
+                        </div>
                         <div className="project-info p-4">
                             <h3 className="text-xl font-semibold">{project.name}</h3>
                             <p className="text-gray-400">{project.description}</p>

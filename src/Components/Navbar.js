@@ -7,14 +7,14 @@ const Navbar = () => {
     <nav>
       <ul className='flex space-x-8 capitalize text-[15px]'>
         {navigation.map((item, index) => {
-          return ( // Ajout du return ici
+          return ( 
             <li className='text-white hover:text-accent cursor-pointer' key={index}>
               <Link 
                 to={item.href}
                 activeClass='active'
                 spy={true}
                 smooth={true}
-                duration={500} // Vous avez mis true, mais ça devrait être une valeur numérique pour la durée
+                duration={500} 
                 offset={-70}
                 className='transition-all duration-300'
               >

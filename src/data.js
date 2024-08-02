@@ -12,6 +12,18 @@ import {
   FiMapPin,
 } from 'react-icons/fi';
 
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaFacebook,
+  FaEnvelope,
+  FaPhone as FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaBriefcase,
+  FaGraduationCap,
+} from 'react-icons/fa';
+
+
 // companies icons
 import FreelancerBrandIcon from './assets/img/brands/freelancer.png';
 import UpworkBrandIcon from './assets/img/brands/upwork.png';
@@ -20,12 +32,10 @@ import BehanceBrandIcon from './assets/img/brands/behance.png';
 import DribbbleBrandIcon from './assets/img/brands/dribbble.png';
 
 // projects images
-import Project1 from './assets/img/projects/p1.webp';
-import Project2 from './assets/img/projects/p2.webp';
-import Project3 from './assets/img/projects/p3.webp';
-import Project4 from './assets/img/projects/p4.webp';
-import Project5 from './assets/img/projects/p5.webp';
-import Project6 from './assets/img/projects/p6.webp';
+import Project1 from './assets/img/projects/booki.png';
+import Project2 from './assets/img/projects/nina.png';
+import Project3 from './assets/img/projects/kasa.png';
+import Project4 from './assets/img/projects/sophie.png';
 
 // skills images
 import SkillImg1 from './assets/img/skills/html5.png';
@@ -64,7 +74,7 @@ export const navigation = [
 // social
 export const social = [
   {
-    icon: <FiYoutube />,
+    icon: <FaLinkedin />,
     href: '',
   },
   {
@@ -110,38 +120,26 @@ export const projectsData = [
   {
     id: '1',
     image: Project1,
-    name: 'project name 1',
-    category: 'UI/UX design',
+    name: 'Site Booki',
+    category: 'Développement Web',
   },
   {
     id: '2',
     image: Project2,
-    name: 'project name 2',
-    category: 'web development',
+    name: 'Portfolio Nina Carducci',
+    category: 'Autres',
   },
   {
     id: '3',
     image: Project3,
-    name: 'project name 3',
-    category: 'UI/UX design',
+    name: 'Kasa',
+    category: 'React, JS',
   },
   {
     id: '4',
     image: Project4,
-    name: 'project name 4',
-    category: 'branding',
-  },
-  {
-    id: '5',
-    image: Project5,
-    name: 'project name 5',
-    category: 'web development',
-  },
-  {
-    id: '6',
-    image: Project6,
-    name: 'project name 6',
-    category: 'web development',
+    name: 'Site Sophie bluel',
+    category: 'React, JS',
   },
 ];
 
@@ -192,25 +190,25 @@ export const services = [
     icon: <FiLayout />,
     name: 'Front-end',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "Créez des interfaces utilisateurs modernes et réactives pour vos applications web avec mes services front-end. Je m'assure que votre site soit non seulement esthétique, mais aussi intuitif et facile à utiliser.",
   },
   {
     icon: <FiSettings />,
     name: 'Back-end',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "Développez une architecture back-end robuste et sécurisée pour supporter votre application web. Je m'occupe de la gestion des bases de données, de la création des API et de l'intégration des services pour garantir une performance optimale.",
   },
   {
     icon: <FiPenTool />,
-    name: 'Autres',
+    name: 'Coach Agile',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "Améliorez votre efficacité et collaborez mieux avec une méthodologie agile adaptée à vos besoins. En tant que coach agile, je vous guide pour adopter les meilleures pratiques et transformer votre équipe en une unité performante et flexible.",
   },
   {
     icon: <FiTag />,
     name: 'SEO',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio perferendis volm quibusdam ullam qui dolore.',
+      "Augmentez votre visibilité en ligne et attirez plus de visiteurs grâce à mes services SEO. J'optimise votre site pour les moteurs de recherche, améliore votre contenu et vous aide à atteindre un meilleur classement.",
   },
 ];
 
