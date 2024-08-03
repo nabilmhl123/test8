@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { contact } from '../data';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_q2w2msn', 'template_docakyq', form.current, 'Ra9aXDRV9LmYfpek5')
+      .then((result) => {
+          console.log(result.text);
+          alert("Message envoyé avec succès!");
+      }, (error) => {
+          console.log(error.text);
+          alert("Une erreur est survenue, veuillez réessayer.");
+      });
+  };
+
   return (
     <section className='section bg-primary' id='contact'>
       <div className='container mx-auto'>
         <div className='flex flex-col items-center text-center'>
           <h2 className='section-title'>Contactez moi</h2>
           <p className='subtitle text-center'>
-          Pour toute demande spécifique.
+            Pour toute demande spécifique.
           </p>
         </div>
         <div className='flex flex-col lg:gap-x-8 lg:flex-row'>
@@ -29,18 +45,15 @@ const Contact = () => {
               );
             })}
           </div>
-          <form className='space-y-8 w-full max-w-[780px]'>
+          <form ref={form} onSubmit={sendEmail} className='space-y-8 w-full max-w-[780px]'>
             <div className='flex gap-8'>
-            <input className='input' type='text'
-            placeholder='Votre nom'></input>
-            <input className='input' type='text' 
-            placeholder='Votre email'></input>
+              <input className='input' type='text' name='user_name' placeholder='Votre nom' required />
+              <input className='input' type='email' name='user_email' placeholder='Votre email' required />
             </div>
-            <input type='text' className='input'
-            placeholder='Description'></input>
-            <textarea className='textarea' placeholder='Votre message'></textarea>
-            <button className='btn btn-lg bg-accent hover:bg-accent-hover'>
-                Envoyez un message
+            <input type='text' className='input' name='subject' placeholder='Description' required />
+            <textarea className='textarea' name='message' placeholder='Votre message' required></textarea>
+            <button type='submit' className='btn btn-lg bg-accent hover:bg-accent-hover'>
+              Envoyez un message
             </button>
           </form>
         </div>
