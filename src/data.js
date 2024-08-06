@@ -122,24 +122,40 @@ export const projectsData = [
     image: Project1,
     name: 'Site Booki',
     category: 'Développement Web',
+    issues: 'Problèmes de mise en page responsive et de compatibilité entre navigateurs.',
+    solutions: 'Utilisation de Flexbox pour la mise en page responsive et des préfixes CSS pour la compatibilité des navigateurs.',
+    skills: 'HTML, CSS',
+    codeLink: 'https://github.com/nabilmhl123/nabilmhl23'
   },
   {
     id: '2',
     image: Project2,
     name: 'Portfolio Nina Carducci',
     category: 'Autres',
+    issues: 'Optimisation des performances, SEO et accessibilité.',
+    solutions: 'Optimisation des images, utilisation de balises sémantiques et de bonnes pratiques pour le SEO et l\'accessibilité.',
+    skills: 'HTML, Performance Optimization, SEO, Accessibility',
+    codeLink: 'https://github.com/nabilmhl123/Projet4'
   },
   {
     id: '3',
     image: Project3,
     name: 'Kasa',
     category: 'React, JS',
+    issues: 'Gestion de l\'état global de l\'application et des routes dynamiques.',
+    solutions: 'Utilisation de Redux pour la gestion de l\'état et de React Router pour les routes dynamiques.',
+    skills: 'React, Redux, CSS, React Router',
+    codeLink: 'https://github.com/nabilmhl123/Projet5'
   },
   {
     id: '4',
     image: Project4,
     name: 'Site Sophie bluel',
     category: 'React, JS',
+    issues: 'Intégration d\'une API externe et gestion des erreurs.',
+    solutions: 'Utilisation de try/catch pour la gestion des erreurs et d\'Axios pour l\'intégration API.',
+    skills: 'HTML, JavaScript, API integration, Error Handling',
+    codeLink: 'https://github.com/nabilmhl123/Projet3.1'
   },
 ];
 

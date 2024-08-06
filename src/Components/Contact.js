@@ -1,9 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { contact } from '../data';
 
 const Contact = () => {
   const form = useRef();
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -12,6 +16,11 @@ const Contact = () => {
       .then((result) => {
           console.log(result.text);
           alert("Message envoyé avec succès!");
+          // Réinitialiser les champs du formulaire
+          setUserName('');
+          setUserEmail('');
+          setSubject('');
+          setMessage('');
       }, (error) => {
           console.log(error.text);
           alert("Une erreur est survenue, veuillez réessayer.");
@@ -47,11 +56,42 @@ const Contact = () => {
           </div>
           <form ref={form} onSubmit={sendEmail} className='space-y-8 w-full max-w-[780px]'>
             <div className='flex gap-8'>
-              <input className='input' type='text' name='user_name' placeholder='Votre nom' required />
-              <input className='input' type='email' name='user_email' placeholder='Votre email' required />
+              <input 
+                className='input' 
+                type='text' 
+                name='user_name' 
+                placeholder='Votre nom' 
+                required 
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+              <input 
+                className='input' 
+                type='email' 
+                name='user_email' 
+                placeholder='Votre email' 
+                required 
+                value={userEmail}
+                onChange={(e) => setUserEmail(e.target.value)}
+              />
             </div>
-            <input type='text' className='input' name='subject' placeholder='Description' required />
-            <textarea className='textarea' name='message' placeholder='Votre message' required></textarea>
+            <input 
+              type='text' 
+              className='input' 
+              name='subject' 
+              placeholder='Description' 
+              required 
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            />
+            <textarea 
+              className='textarea' 
+              name='message' 
+              placeholder='Votre message' 
+              required 
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
             <button type='submit' className='btn btn-lg bg-accent hover:bg-accent-hover'>
               Envoyez un message
             </button>
